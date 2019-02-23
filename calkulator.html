@@ -1,0 +1,80 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>"Let's try this simple calculator"</h1><br/>
+        <p> please fill in the following input forms with any number(s) only!</p>
+
+        <h3>Input Angka 1:</h3>
+        <input type = "text" id="inputAngka1"></input>
+        <input type ="submit" id="submitAngka1"></Input>
+        <br/>
+        <h3>Input Angka 2:</h3>
+        <input type = "text" id="inputAngka2"></Input>
+        <input type ="submit" id="submitAngka2"></Input>
+        <br/>
+        <br/>
+        <br/>
+
+        <input type ="button" id="addition" value = "+"></input>
+        <input type ="button" id="minus" value="-"></input>
+        <input type ="button" id="multiply" value="*"></input>
+        <input type ="button" id="division" value="/"></input>
+
+        <br>
+        <br/>
+        <br/>
+
+        Hasil : <div id="result"></div>
+
+        <br/>
+
+
+        <script type="text/javascript">
+
+            function showAlertAngka1(){
+                alert(document.getElementById("inputAngka1").value)
+            }
+
+            function showAlertAngka2(){
+                alert(document.getElementById("inputAngka2").value)
+            }
+
+            document.getElementById("submitAngka1").onclick = showAlertAngka1
+            document.getElementById("submitAngka2").onclick = showAlertAngka2
+
+
+            document.getElementById("addition").onclick = addition
+            document.getElementById("minus").onclick = minus
+            document.getElementById("multiply").onclick = multiplication
+            document.getElementById("division").onclick = division
+
+            function addition(){
+                var total = Number(document.getElementById("inputAngka1").value) + Number(document.getElementById("inputAngka2").value)
+                document.getElementById("result").textContent = total
+            }
+
+            function minus(){
+                var total = Number(document.getElementById("inputAngka1").value) - Number(document.getElementById("inputAngka2").value)
+                document.getElementById("result").textContent = total
+            }
+
+            function multiplication(){
+                var total = Number(document.getElementById("inputAngka1").value) * Number(document.getElementById("inputAngka2").value)
+                // alert(total)
+                document.getElementById("result").textContent = total
+            }
+
+            function division(){
+                var total = Number(document.getElementById("inputAngka1").value) / Number(document.getElementById("inputAngka2").value)
+                document.getElementById("result").textContent = total
+            }
+
+
+
+        </script>
+
+    </body>
+
+</html>
